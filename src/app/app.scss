@@ -1,0 +1,16 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  main {
+    flex: 1;
+  }
+}
+
+// Global styles
+:host {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
