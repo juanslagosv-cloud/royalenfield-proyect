@@ -1,48 +1,15 @@
 <div class="motorcycle-page">
-  <h1>Nuestras Motocicletas</h1>
   <div class="motorcycle-grid">
     <div class="motorcycle-card">
-  <img src="assets/classic-350.png" alt="Classic 350">
-      <h3>Classic 350</h3>
-      <p>La legendaria Classic 350 regresa con un nuevo motor y tecnología moderna, manteniendo su icónico estilo retro.</p>
-      <div class="specs">
-        <span>Motor: 349cc</span>
-        <span>Potencia: 20.2 bhp</span>
-        <span>Torque: 27 Nm</span>
-      </div>
+      <img src="assets/classic-350.png" alt="Classic 350" />
     </div>
-    
     <div class="motorcycle-card">
-  <img src="assets/himalayan.png" alt="Himalayan">
-      <h3>Himalayan</h3>
-      <p>Diseñada para la aventura, la Himalayan te llevará a donde ninguna otra motocicleta puede llegar.</p>
-      <div class="specs">
-        <span>Motor: 411cc</span>
-        <span>Potencia: 24.3 bhp</span>
-        <span>Torque: 32 Nm</span>
-      </div>
+      <img src="assets/himalayan.png" alt="Himalayan" />
     </div>
-    
     <div class="motorcycle-card">
-  <img src="assets/interceptor.png" alt="Interceptor 650">
-      <h3>Interceptor 650</h3>
-      <p>El regreso triunfal de un ícono de los años 60, ahora con un potente motor bicilíndrico.</p>
-      <div class="specs">
-        <span>Motor: 648cc</span>
-        <span>Potencia: 47 bhp</span>
-        <span>Torque: 52 Nm</span>
-      </div>
+      <img src="assets/interceptor.png" alt="Interceptor 650" />
     </div>
   </div>
 </div>
-<section class="contenedor-motos">
-  @for (moto of motocicletas; track moto.id) {
-    <div class="tarjeta">
-      <img [src]="moto.imagen" [alt]="moto.nombre">
-      <h3>{{ moto.nombre }}</h3>
-      <p>{{ moto.description }}</p>
-      <span>Precio: {{ moto.precio | currency:'COP' }}</span>
-    </div>
-  }
-</section>
+
 
