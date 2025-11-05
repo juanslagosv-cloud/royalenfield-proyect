@@ -4,9 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && node scripts/copy-404.js",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build": "ng build",
+    "postbuild": "node scripts/copy-404.js",
+    "test": "ng test",
+    "e2e": "ng e2e",
+    "deploy": "ng build && node scripts/copy-404.js"
   },
   "prettier": {
     "printWidth": 100,
@@ -33,7 +35,7 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^20.3.8",
+    "@angular-devkit/build-angular": "^20.3.7",
     "@angular/build": "^20.3.7",
     "@angular/cli": "^20.3.7",
     "@angular/compiler-cli": "^20.3.0",
