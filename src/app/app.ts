@@ -11,7 +11,15 @@ import { FooterComponent } from './components/footer/footer';
     HeaderComponent,
     FooterComponent
   ],
-  templateUrl: './app.html',
+  template: `
+    <div class="app-container">
+      <app-header></app-header>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+      <app-footer></app-footer>
+    </div>
+  `,
   styleUrls: ['./app.scss']
 })
 export class App {}
