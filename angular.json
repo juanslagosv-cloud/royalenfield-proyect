@@ -37,12 +37,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build:application",
           "options": {
-            "index": "src/index.html",
-
-            "outputPath": "docs",
+            "outputPath": "dist/royalenfield-proyecto",
             "main": "src/main.ts",
+            "index": "src/index.html",
             "polyfills": [
               "zone.js"
             ],
@@ -53,7 +52,8 @@
               "src/assets",
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
@@ -75,7 +75,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/Royal-proyecto/"
+              "baseHref": "https://juanslagosv-cloud.github.io/royalenfield-proyecto/"
 
             },
             "development": {
@@ -122,6 +122,9 @@
               "src/styles.scss"
             ]
           }
+        },
+        "deploy":{
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     
