@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .contact-container {
   padding-top: 80px;
 
@@ -115,7 +117,8 @@
         transition: background-color 0.3s ease;
         
         &:hover {
-          background-color: darken(#d4001a, 10%);
+          // Sass darken() deprecated: use color.adjust for equivalent effect
+          background-color: color.adjust(#d4001a, $lightness: -10%);
         }
       }
     }
