@@ -1,13 +1,16 @@
 <div class="motorcycle-page">
+  <h1>Motocicletas Royal Enfield</h1>
   <div class="motorcycle-grid">
-    <div class="motorcycle-card">
-      <img src="assets/classic-350.png" alt="Classic 350" />
-    </div>
-    <div class="motorcycle-card">
-      <img src="assets/himalayan.png" alt="Himalayan" />
-    </div>
-    <div class="motorcycle-card">
-      <img src="assets/interceptor.png" alt="Interceptor 650" />
+    <div class="motorcycle-card" *ngFor="let m of motocicletas">
+      <img [src]="m.imagen" [alt]="m.nombre" />
+      <h3>{{ m.nombre }}</h3>
+      <p>{{ m.descripcion }}</p>
+      <div class="specs">
+        <span>{{ m.motor }}</span>
+        <span>{{ m.potencia }}</span>
+        <span>{{ m.torque }}</span>
+        <span class="price">{{ m.precio | currency:'COP':'code':'1.0-0' }}</span>
+      </div>
     </div>
   </div>
 </div>
